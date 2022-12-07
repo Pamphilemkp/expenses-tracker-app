@@ -1,0 +1,19 @@
+
+<%= link_to groups_path do %>
+  <i class="fa-solid fa-arrow-left-long"></i>
+<% end %>
+ 
+ <p>Total</p>
+ <p> $<%= @group.entities.sum(:amount )%></p>
+ 
+ <p>
+        <%= @group.name %>
+        <%= @group.icon %>
+ </p>
+<div>
+    <% @group.entities.each do |entity| %>
+          <p> <%= entity.name %></p>
+          <p> $<%= entity.amount %></p>
+      <% end %>
+</div>
+ <p> <%= link_to 'New transaction',  new_group_entity_path(@group) %> </p>

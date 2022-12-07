@@ -1,0 +1,17 @@
+<p><%= link_to 'Add category', new_group_path %></p>
+
+<p>Total  $<%= Entity.sum(:amount)  %></p>
+
+<div>
+   <% @groups.each do |group| %>
+     <p>
+        <%= link_to group.name, group_path(group) %>
+        <%= group.icon %>
+     </p>
+    <div>
+       <p> $<%= group.entities.sum(:amount) %> </p>
+   </div>
+
+   <% end %>
+</div>
+

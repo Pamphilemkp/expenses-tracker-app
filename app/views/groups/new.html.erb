@@ -1,0 +1,47 @@
+<%= link_to groups_path do %>
+  <i class="fa-solid fa-arrow-left-long"></i>
+<% end %>
+
+<%= form_with model: @group, url: groups_path do |form| %>
+<%# # Showing error messages for validations %> 
+  <% if @group.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+        <% @group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+     <%# # Showing error messages for failures with flash %> 
+  <% flash.each do |type, msg| %>
+  <div>
+   <p> <%= msg %> </p>
+  </div>
+<% end %>
+
+       <div class="container-login">
+        <div class="row">
+          <div class="col-25">
+              <%= form.label :name, style: "display: block" %>
+           <div class="col-75">
+             <%= form.text_field :name %>
+           </div>
+          </div><br/>
+
+       
+     <div>
+    <%= form.label :icon, 'Select a category:' %> <br/>
+    <%= form.select :icon, [ "Shoes 👞 ","Clothes 👔","Music 🎵","Party 🎉","Events 🎄","Gift 🎁","Milk 🍼","Trip ✈️",
+     "Games 🎮", "📚", "Health 🏥", "Sports 🏈", "Cinema 🎬", "Houses and Rents 🏠", "Pets 🐶", "Beers 🍻", "Foods 🍔", "Cars 🚗", "Others🖥"],
+      value: @group.icon, required: true, class: "form-control" %> 
+  </div><br/>
+
+   <div class="row">
+    <%= form.submit "Add category" %>
+   </div>
+ </div>
+<% end %>
