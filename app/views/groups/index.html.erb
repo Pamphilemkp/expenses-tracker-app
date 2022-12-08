@@ -1,17 +1,16 @@
-<p><%= link_to 'Add category', new_group_path %></p>
-
-<p>Total  $<%= Entity.sum(:amount)  %></p>
-
-<div>
-   <% @groups.each do |group| %>
-     <p>
-        <%= link_to group.name, group_path(group) %>
-        <%= group.icon %>
-     </p>
-    <div>
-       <p> $<%= group.entities.sum(:amount) %> </p>
+  <div class="category-index-container"> 
+   <div class="total-index">
+      <p>TOTAL MONEY SPENT</p>
+      <p> $<%= Entity.sum(:amount)  %> </p>
    </div>
 
-   <% end %>
+      <% @groups.each do |group| %>
+   <div class="category-index">
+      <p class="category-icon"> <%= group.icon %> </p>
+      <p> <%= link_to group.name.capitalize, group_path(group) %> </p>
+      <p> $<%= group.entities.sum(:amount) %> </p>
+   </div>
+      <% end %>
+   
+  <%= link_to 'Add category', new_group_path, class: 'add-category' %>
 </div>
-

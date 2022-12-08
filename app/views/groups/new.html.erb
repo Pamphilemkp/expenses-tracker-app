@@ -1,8 +1,11 @@
+
+<%= form_with model: @group, url: groups_path, html: { class: "form-logged-in" } do |form| %>
+
 <%= link_to groups_path do %>
-  <i class="fa-solid fa-arrow-left-long"></i>
+  <i class="fa-solid fa-circle-chevron-left back-icon "></i>
 <% end %>
 
-<%= form_with model: @group, url: groups_path do |form| %>
+
 <%# # Showing error messages for validations %> 
   <% if @group.errors.any? %>
     <div style="color: red">
@@ -31,17 +34,19 @@
              <%= form.text_field :name %>
            </div>
           </div><br/>
-
        
      <div>
     <%= form.label :icon, 'Select a category:' %> <br/>
-    <%= form.select :icon, [ "Shoes 👞 ","Clothes 👔","Music 🎵","Party 🎉","Events 🎄","Gift 🎁","Milk 🍼","Trip ✈️",
-     "Games 🎮", "📚", "Health 🏥", "Sports 🏈", "Cinema 🎬", "Houses and Rents 🏠", "Pets 🐶", "Beers 🍻", "Foods 🍔", "Cars 🚗", "Others🖥"],
-      value: @group.icon, required: true, class: "form-control" %> 
+
+    <div class= "form-control">
+        <%= form.select :icon, ["⌚", "👞 ", "👔", "🎵", "🎉", "🎄", "🎁", "🍼", "✈️",
+        "🎮", "📚", "🏥", "🏈", "🎬", "🏠", "💊", "🚇", "🚔", "🐶", "🍻", "🍔", "🍟", "🚗", "🎲", "🖥"],
+          value: @group.icon, required: true, class: "form-control" %> 
+    </div>
   </div><br/>
 
    <div class="row">
-    <%= form.submit "Add category" %>
+    <%= form.submit "Add category", class: 'add-category' %>
    </div>
  </div>
 <% end %>

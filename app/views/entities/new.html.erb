@@ -1,9 +1,12 @@
+
+
+
+<%= form_with model: @entity, url: group_entities_path, method: :post, html: { class: "form-logged-in" } do |form| %>
+
 <%= link_to groups_path do %>
-  <i class="fa-solid fa-arrow-left-long"></i>
+  <i class="fa-solid fa-circle-chevron-left back-icon "></i>
 <% end %>
 
-
-<%= form_with model: @entity, url: group_entities_path, method: :post do |form| %>
 <%# # Showing error messages for validations %> 
   <% if @entity.errors.any? %>
     <div style="color: red">
@@ -44,7 +47,7 @@
 
 
    <div class="row">
-    <%= form.submit "Add transaction" %>
+    <%= form.submit "Add transaction", class: 'add-category' %>
    </div>
  </div>
 <% end %>

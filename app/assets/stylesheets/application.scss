@@ -13,4 +13,119 @@
  *= require_tree .
  *= require_self
  */
- @import "font-awesome";
+@import "font-awesome";
+
+body {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.total-index {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  border: 1px solid rgb(226, 220, 220);
+  padding: 20px;
+  background-color: white;
+}
+
+.category-index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+}
+
+.category-index {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  padding: 10px;
+  border: 1px solid rgb(226, 220, 220);
+  background-color: white;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.category-icon {
+  font-size: 70px;
+  margin: 0;
+}
+
+.category-show {
+  display: flex;
+  width: 80vw;
+  gap: 20px;
+  align-items: center;
+}
+
+.category-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  padding: 10px;
+  border: 1px solid rgb(226, 220, 220);
+  background-color: white;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.category-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+
+.total-amount {
+  margin-top: 20px;
+  align-items: center;
+}
+
+.category-show-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+}
+
+.add-category {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  width: 80vw;
+  padding: 10px;
+  background-color: #5fb532;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.add-category:active {
+  color: rgb(242, 43, 43);
+}
+
+.back-icon {
+  color: black;
+  font-size: 2.5rem;
+  width: 90vw;
+  margin-left: 10vw;
+  padding: 10px;
+}
