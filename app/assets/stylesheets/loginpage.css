@@ -19,7 +19,7 @@
 
 .welcome-login,
 .welcome-signup {
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: #3778c2;
   text-decoration: none;
   border: 1px solid rgb(221, 228, 231);
@@ -41,4 +41,35 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .welcome-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 236, 232);
+    margin-top: -40px;
+  }
+
+  .welcome-main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .welcome-buttons {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }

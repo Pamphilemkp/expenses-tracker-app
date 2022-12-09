@@ -70,9 +70,9 @@
 .delete-session {
   background-color: rgb(241, 59, 59);
   color: white;
-  border: 1px solid black;
+  border: 1px solid rgb(201, 196, 196);
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
 }
 

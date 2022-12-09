@@ -4,6 +4,7 @@
       <p> $<%= Entity.sum(:amount)  %> </p>
    </div>
 
+   <div class="categories-index">
       <% @groups.each do |group| %>
    <div class="category-index">
       <p class="category-icon"> <%= group.icon %> </p>
@@ -11,6 +12,7 @@
       <p> $<%= group.entities.sum(:amount) %> </p>
    </div>
       <% end %>
+   </div>
    
   <%= link_to 'Add category', new_group_path, class: 'add-category' %>
 </div>

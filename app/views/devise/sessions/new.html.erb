@@ -11,8 +11,13 @@
     <h2>LOGIN</h2>
 
     <div class="actions action-next">
-       <%= f.submit "Log in" %>
+       <%= f.submit "Log in", class: "submit" %>
    </div>
+  </div>
+
+  <div class="alert-notice-container">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
   </div>
 
   <div class="field">
@@ -33,4 +38,7 @@
   <% end %>
 
 <% end %>
+
+
+
 </div>

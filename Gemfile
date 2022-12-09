@@ -29,6 +29,7 @@ gem 'cancancan'
 gem 'devise'
 gem 'font-awesome-sass', '~> 6.2.1'
 gem 'jbuilder'
+gem "letter_opener"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

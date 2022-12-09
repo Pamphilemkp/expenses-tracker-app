@@ -15,8 +15,13 @@
           <h2>Register</h2>
 
           <div class="actions action-next">
-             <%= f.submit "Next" %>
+             <%= f.submit "Next", class: "submit" %>
         </div>
+      </div>
+
+      <div class="alert-notice-container">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
       </div>
 
       <div class="field">

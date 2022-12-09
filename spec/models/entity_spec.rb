@@ -1,14 +1,21 @@
 require 'rails_helper'
 
-RSpec.describe Category, type: :model do
+RSpec.describe Entity, type: :model do
   @user = User.create(name: 'Pamphile', email: 'pelico@gmail.com', password: '123456')
+  @group = Group.new( name: 'Food', icon: 'smile', author: @user)
   subject do
-    Category.new(user_id: @user, name: 'Fufu', icon: 'delicious')
+      Entity.create( name: "Salad", amount: 100, group: @group)
   end
 
   before { subject.save }
 
-  it 'recipe user to be the user that created it' do
-    expect(subject.user).to be == @user
+  it 'name must be present' do
+    subject.name = nil
+    expect(subject).to_not be_valid
+  end
+
+  it 'the amount must be present' do
+    subject.amount = 100
+    expect(subject).to_not be_valid
   end
 end
