@@ -1,0 +1,31 @@
+
+
+ <div class="category-show-container">
+
+    <%= link_to groups_path do %>
+      <i class="fa-solid fa-circle-chevron-left back-icon"></i>
+    <% end %>
+
+   <div class="category-show">
+      <p class="category-icon"> <%= @group.icon %> </p>
+      <p> <%= @group.name.capitalize %> </p>
+   </div>
+
+    <div>
+        <% @group.entities.each do |entity| %>
+
+        <div class="category-detail">
+             <div class="category-amount">
+                <p> <%= entity.name.capitalize %></p>
+                <p> $<%= entity.amount %></p>
+             </div>
+              <p> <%= entity.created_at%> </p>
+          </div>
+          <% end %>
+        <div class="category-amount total-amount">
+           <p>TOTAL PAYMENT </p>
+           <p> $<%= @group.entities.sum(:amount) %> </p>
+       </div>
+    </div>
+ <%= link_to 'New transaction',  new_group_entity_path(@group), class: 'add-category add-transaction' %> 
+</div>

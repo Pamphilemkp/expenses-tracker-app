@@ -1,0 +1,50 @@
+
+<div class="signup-form">
+
+
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name) , html: { class: "form" }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="register">
+
+         <p> <%= link_to unauthenticated_user_root_path do %>
+            <i class="fa-solid fa-arrow-left-long icon"></i> 
+          <% end %> </p>
+
+          <h2>Register</h2>
+
+          <div class="actions action-next">
+             <%= f.submit "Next", class: "submit" %>
+        </div>
+      </div>
+
+      <div class="alert-notice-container">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+
+      <div class="field">
+        <%= f.label :name, "Full name :" %>
+        <%= f.text_field :name, class: "input-field" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email, "Email :" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input-field" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> minimum) :</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "input-field" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation, "Confirm password:" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input-field" %>
+      </div>
+    <% end %>
+</div>
