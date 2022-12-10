@@ -4,7 +4,7 @@ RSpec.describe Group, type: :model do
   @user = User.create(name: 'Pamphile', email: 'pelico@gmail.com', password: '123456')
 
   subject do
-      Group.new( name: 'Food', icon: 'smile', author: @user)
+    Group.new(name: 'Food', icon: 'smile', author: @user)
   end
 
   before { subject.save }

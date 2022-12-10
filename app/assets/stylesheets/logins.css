@@ -97,7 +97,6 @@ label {
   font-size: 2rem;
 }
 
-
 @media only screen and (max-width: 768px) {
   .form {
     border: solid 1px rgb(206, 201, 201);
@@ -116,7 +115,7 @@ label {
     outline: 0;
     margin-top: 10px;
   }
-  
+
   .field {
     display: flex;
     align-items: center;
@@ -131,7 +130,6 @@ label {
     width: 75px;
   }
 
-
   .action-next input {
     padding: 10px;
     border-radius: 10px;
@@ -141,7 +139,7 @@ label {
     cursor: pointer;
   }
 
-  .action-next input:hover {
+  .action-next input:active {
     font-size: 22px;
     cursor: pointer;
   }
@@ -150,5 +148,4 @@ label {
     color: red;
     cursor: pointer;
   }
-
 }

@@ -43,9 +43,7 @@
   gap: 10px;
 }
 
-
 @media only screen and (max-width: 768px) {
-
   .welcome-container {
     width: 100vw;
     height: 100vh;
@@ -64,7 +62,7 @@
     align-items: center;
     padding: 30px;
   }
-  
+
   .welcome-buttons {
     width: 80vw;
     display: flex;
