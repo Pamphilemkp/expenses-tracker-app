@@ -1,9 +1,9 @@
 
 
- <div class="category-show-container">
+ <div class="category-show-container category-show-transaction">
 
     <%= link_to groups_path do %>
-      <i class="fa-solid fa-circle-chevron-left back-icon"></i>
+      <i class="fa-solid fa-circle-chevron-left back-icon icon-cat-trans"></i>
     <% end %>
 
    <div class="category-show">
@@ -12,7 +12,12 @@
    </div>
 
     <div>
-        <% @group.entities.each do |entity| %>
+       <div class="category-amount total-amount">
+           <p>TOTAL PAYMENT </p>
+           <p> $<%= @group.entities.sum(:amount) %> </p>
+       </div>
+
+        <% @group.entities.order('created_at DESC').each do |entity| %>
 
         <div class="category-detail">
              <div class="category-amount">
@@ -22,10 +27,6 @@
               <p> <%= entity.created_at%> </p>
           </div>
           <% end %>
-        <div class="category-amount total-amount">
-           <p>TOTAL PAYMENT </p>
-           <p> $<%= @group.entities.sum(:amount) %> </p>
-       </div>
     </div>
  <%= link_to 'New transaction',  new_group_entity_path(@group), class: 'add-category add-transaction' %> 
 </div>

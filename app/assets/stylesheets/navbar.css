@@ -58,6 +58,8 @@
   background-color: #3778c2;
   overflow-x: hidden;
   margin: 0;
+  position: fixed;
+  top: 0;
 }
 
 .header {

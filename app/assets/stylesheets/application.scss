@@ -38,7 +38,7 @@ html {
   border: 1px solid rgb(226, 220, 220);
   padding: 20px;
   background-color: white;
-  margin-top: -20px;
+  margin-top: 10px;
 }
 
 .category-index-container {
@@ -149,4 +149,61 @@ html {
   align-items: center;
   width: 100vw;
   margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container {
+    // overflow: hidden;
+  }
+
+  .add-category {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    width: 80vw;
+    padding: 10px;
+    background-color: #5fb532;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px;
+    position: fixed;
+    z-index: 2;
+    top: 70vh;
+  }
+
+  .add-transaction {
+    position: fixed;
+    top: 70vh;
+    z-index: 2;
+  }
+
+  .category-index-container {
+    overflow-y: scroll;
+    height: 60vh;
+    margin-top: 90px;
+  }
+
+  .category-index {
+    overflow-y: scroll;
+  }
+
+  .category-show-transaction {
+    margin-top: 100px;
+    overflow-y: scroll;
+    height: 60vh;
+  }
+
+  .icon-cat-trans {
+    margin-top: 50px;
+  }
 }

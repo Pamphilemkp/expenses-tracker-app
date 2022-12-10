@@ -51,7 +51,8 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(240, 236, 232);
-    margin-top: -40px;
+
+    /* margin-top: -40px; */
   }
 
   .welcome-main {
