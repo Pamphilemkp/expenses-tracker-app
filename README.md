@@ -1,36 +1,3 @@
-<a name="readme-top"></a>
-
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
-<div align="center">
-
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -38,48 +5,53 @@ After you're finished please remove all the comments and instructions!
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+    - [🚀 Live Demo](#live-demo)
+    - [Live video](#live-video)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
+- [👥 Author](#authors)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 EXPENSES TRACKER APP <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> Expenses-tracker-app is an application that allows the user to:
 
-**[your_project__name]** is a...
+> - register and log in, so that the data is private to them.
+> - introduce new transactions associated with a category.
+> - see the money spent on each category.
+
+It is basically a mobile web application where you can manage your budget:
+you have a list of transactions associated with a certain category,
+so that you can see how much money you spent and on what.
+
+**
+expenses-tracker-app** is a Ruby on Rails application...
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
-  <summary>Client</summary>
+  <summary>Client / Server</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Server</summary>
+  <summary>Deploy</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://render.com/">Render</a></li>
   </ul>
 </details>
 
@@ -90,25 +62,26 @@ After you're finished please remove all the comments and instructions!
   </ul>
 </details>
 
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<details>
+  <summary>Tests</summary>
+  <ul>
+    <li><a href="https://rspec.info/">Rspec</a></li>
+    <li><a href="https://github.com/teamcapybara/capybara">Capibara</a></li>
+  </ul>
+</details>
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+- [Live Demo Link]()
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live video <a name="live-video"></a>
+
+- [Live video](https://www.loom.com/share/6bc6987da8264d86bdeea284531ed8bb)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,115 +89,78 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
+- You should have ruby installed in your machine, you can follow the steps given by the [official documentation](https://www.ruby-lang.org/en/documentation/installation/).
 
-```sh
- gem install rails
-```
- -->
+- You should have a postgres user with superuser permissions. you can refer to the official [postgres documentation](https://www.postgresql.org/docs/current/role-attributes.html#:~:text=To%20create%20a%20new%20database,that%20is%20already%20a%20superuser.&text=A%20role%20must%20be%20explicitly,use%20CREATE%20ROLE%20name%20CREATEDB%20.) to create or update a role.
 
 ### Setup
 
-Clone this repository to your desired folder:
+First, you must clone this repository locally running this command:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
 ```
---->
+git clone git@github.com:marurevi/
+expenses-tracker-app.git
+```
 
+and navigate to the cloned directory:
+
+```
+cd budget_app
+```
 ### Install
 
-Install this project with:
+Once inside the project directory, you should install all project dependencies:
 
-<!--
-Example command:
+- Install bundler:
 
-```sh
-  cd my-project
-  gem install
 ```
---->
+gem install bundler
+```
+
+- Install project dependencies
+
+```
+bundle install
+```
 
 ### Usage
 
-To run the project, execute the following command:
+You can get the app running locally by opening a local server:
 
-<!--
-Example command:
-
-```sh
-  rails server
 ```
---->
+bin/rails server
+```
 
 ### Run tests
 
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
+If you're on a linux-based system, you could run the executable file to run all specs:
 
 ```
- -->
+bin/rspec
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Windows users have to specify ruby in this case:
+
+```
+ruby bin/rspec
+```
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Pamphile Mkp**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- GitHub:   [@pamphilemkp](https://github.com/pamphilemkp)
+- Twitter:  [@pamphilemkp](https://Twitter.com/PamphileMusonda)
+- LinkedIn: [@pamphilemkp](https://www.linkedin.com/in/pamphile-musonda)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -242,9 +178,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -252,25 +186,8 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
+- Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella). Published under the [Creative Commons license](https://creativecommons.org/licenses/by-nc/4.0/).
+- Linters workflow created by [@anagudelogu](https://github.com/anagudelogu)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

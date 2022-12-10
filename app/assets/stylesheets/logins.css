@@ -1,0 +1,161 @@
+.signup-form {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  height: 80vh;
+}
+
+.input-field {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  outline: 0;
+  margin-top: 10px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px rgb(206, 201, 201);
+  gap: 10px;
+  margin-top: 10px;
+  width: 35vw;
+  color: rgb(206, 201, 201);
+}
+
+.action-next input {
+  border: none;
+  outline: none;
+  background-color: #3778c2;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.register {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3778c2;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.icon {
+  color: white;
+  font-size: 18px;
+}
+
+.form {
+  border: solid 1px rgb(206, 201, 201);
+  height: 80vh;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.shared-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.remeber-me {
+  color: black;
+}
+
+/* Already Logged in form */
+
+.form-logged-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+}
+
+.form-logged-in input,
+label {
+  width: 80vw;
+  margin: 10px;
+  padding: 10px;
+}
+
+.form-control select {
+  width: 40vw;
+  margin: 10px;
+  padding: 10px;
+}
+
+.form-control select option {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .form {
+    border: solid 1px rgb(206, 201, 201);
+    height: 80vh;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90vw;
+
+    /* margin-top: -50px; */
+  }
+
+  .input-field {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    outline: 0;
+    margin-top: 10px;
+  }
+
+  .form-logged-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    margin-top: 100px;
+  }
+
+  .field {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px rgb(206, 201, 201);
+    gap: 10px;
+    margin-top: 10px;
+    width: 90vw;
+    color: rgb(206, 201, 201);
+  }
+
+  .field label {
+    width: 75px;
+  }
+
+  .action-next input {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #5fb523;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .action-next input:active {
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .action-next input:hover {
+    color: red;
+    cursor: pointer;
+  }
+}

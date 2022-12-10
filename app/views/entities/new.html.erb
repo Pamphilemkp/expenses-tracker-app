@@ -1,0 +1,53 @@
+
+
+
+<%= form_with model: @entity, url: group_entities_path, method: :post, html: { class: "form-logged-in" } do |form| %>
+
+<%= link_to group_path(@category) do %>
+  <i class="fa-solid fa-circle-chevron-left back-icon "></i>
+<% end %>
+
+<%# # Showing error messages for validations %> 
+  <% if @entity.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@entity.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+        <% @entity.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+     <%# # Showing error messages for failures with flash %> 
+  <% flash.each do |type, msg| %>
+  <div>
+   <p> <%= msg %> </p>
+  </div>
+<% end %>
+
+       <div class="container-login">
+        <div class="row">
+          <div class="col-25">
+              <%= form.label :name, style: "display: block" %>
+           <div class="col-75">
+             <%= form.text_field :name %>
+           </div>
+          </div><br/>
+
+       
+     <div>
+       <div class="col-25">
+              <%= form.label :amount, style: "display: block" %>
+           <div class="col-75">
+             <%= form.text_field :amount %>
+           </div>
+          </div><br/>
+
+
+   <div class="row">
+    <%= form.submit "Add transaction", class: 'add-category' %>
+   </div>
+ </div>
+<% end %>

@@ -1,0 +1,209 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "font-awesome";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.total-index {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95vw;
+  border: 1px solid rgb(226, 220, 220);
+  padding: 20px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.category-index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+}
+
+.categories-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95vw;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.category-index {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85vw;
+  padding: 10px;
+  border: 1px solid rgb(226, 220, 220);
+  background-color: white;
+  margin: 0;
+  gap: 40px;
+}
+
+.category-icon {
+  font-size: 70px;
+  margin: 0;
+}
+
+.category-show {
+  display: flex;
+  width: 80vw;
+  gap: 20px;
+  align-items: center;
+}
+
+.category-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  padding: 10px;
+  border: 1px solid rgb(226, 220, 220);
+  background-color: white;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.category-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+
+.total-amount {
+  margin-top: 20px;
+  align-items: center;
+}
+
+.category-show-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  margin: 0;
+  // margin-top: -62px;
+}
+
+.add-category {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  width: 80vw;
+  padding: 10px;
+  background-color: #5fb532;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.add-category:active {
+  color: rgb(242, 43, 43);
+}
+
+.back-icon {
+  color: black;
+  font-size: 2.5rem;
+  width: 90vw;
+  margin-left: 10vw;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container {
+    // overflow: hidden;
+  }
+
+  .add-category {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    width: 80vw;
+    padding: 10px;
+    background-color: #5fb532;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px;
+    position: fixed;
+    z-index: 2;
+    top: 70vh;
+  }
+
+  .add-transaction {
+    position: fixed;
+    top: 70vh;
+    z-index: 2;
+  }
+
+  .category-index-container {
+    overflow-y: scroll;
+    height: 60vh;
+    margin-top: 90px;
+  }
+
+  .category-index {
+    overflow-y: scroll;
+  }
+
+  .category-show-transaction {
+    margin-top: 100px;
+    overflow-y: scroll;
+    height: 60vh;
+  }
+
+  .icon-cat-trans {
+    margin-top: 50px;
+  }
+}

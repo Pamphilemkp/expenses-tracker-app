@@ -1,0 +1,10 @@
+<div class="destroy-container" role="alert">
+  <div class="header">
+    <h2>TRANSACTIONS</h2>
+     <% if signed_in? %>
+      <p>
+       <%= link_to "Sign out", destroy_user_session_path, data: { turbo: true, turbo_method: "delete" }, class: "delete-session " %>
+      </p>
+     <% end %>
+   </div>
+</div>
