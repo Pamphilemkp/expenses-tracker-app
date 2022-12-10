@@ -16,7 +16,7 @@ end
   # root "articles#index"
 
   resources :users, only: %i[index show]
-  resources :groups, only: %i[index show new create destroy] do
-    resources :entities, only: %i[index show new create destroy]
+  resources :groups, only: %i[index show new create] do
+    resources :entities, only: %i[new create ]
   end
 end
