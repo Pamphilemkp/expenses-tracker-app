@@ -3,7 +3,7 @@
 
 <%= form_with model: @entity, url: group_entities_path, method: :post, html: { class: "form-logged-in" } do |form| %>
 
-<%= link_to groups_path do %>
+<%= link_to group_path(@category) do %>
   <i class="fa-solid fa-circle-chevron-left back-icon "></i>
 <% end %>
 

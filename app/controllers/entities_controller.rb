@@ -3,6 +3,7 @@ class EntitiesController < ApplicationController
 
   def new
     @entity = Entity.new
+    @category = Group.find(params[:group_id])
   end
 
   def create
