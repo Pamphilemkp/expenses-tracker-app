@@ -23,7 +23,7 @@ class GroupsController < ApplicationController
       redirect_to groups_path
     else
       flash.now[:error] = 'error creating group, please try again'
-      render new_group_path
+      render 'new', notice: 'Error creating category, please try again'
     end
   end
 

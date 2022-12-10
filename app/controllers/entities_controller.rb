@@ -18,7 +18,7 @@ class EntitiesController < ApplicationController
       redirect_to groups_path, notice: 'Success'
     else
       flash.now[:error] = 'error creating entity, please try again'
-      render 'new', notice: 'Error'
+      render 'new', notice: 'Error creating entity, please try again'
     end
   end
 
