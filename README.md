@@ -104,14 +104,14 @@ In order to run this project you need:
 First, you must clone this repository locally running this command:
 
 ```
-git clone git@github.com:marurevi/
+git clone git@github.com:pamphilemkp/
 expenses-tracker-app.git
 ```
 
 and navigate to the cloned directory:
 
 ```
-cd budget_app
+cd expenses-tracker-app
 ```
 ### Install
 
